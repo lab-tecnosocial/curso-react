@@ -1,0 +1,233 @@
+
+/*
+  ========================================
+  BASE COLORS & FONTS
+  ========================================
+*/
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Lato', 'Noto Sans', 'Helvetica', 'Corbel', sans-serif, 'Helvetica', 'Corbel', sans-serif;
+  color: #21242c
+}
+
+li, input{
+  color: #1865f2;
+  font-size:1.6rem;
+  font-weight: 700;
+}
+
+h1{
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4.5rem;
+}
+
+p{
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+/*
+  ========================================
+  BACKGROUNDS
+  ========================================
+*/
+body{
+  background: white;
+}
+/*
+  ========================================
+  MAIN LAYOUT
+  ========================================
+*/
+header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  border-bottom: 1px solid grey;
+}
+
+main{
+  display: block;
+}
+
+.mainStuff{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 2% 10%;
+  content: overflow;
+}
+
+.mainImg, .mainText{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 20vw;
+  height: 100%;
+}
+
+.mainImg{
+  margin: 10px 22px 0 0;
+  height: auto;
+}
+
+.mainText{
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  padding-top: 5%;
+}
+/*
+  ========================================
+  MINI LAYOUT
+  ========================================
+*/
+header section ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+main ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+li{
+  display: block;
+  list-style-type: none;
+  padding: 1rem;
+}
+
+span{
+  display: block;
+}
+
+h1, p{
+  padding-bottom: 1rem;
+}
+
+/*
+========================================
+SPECIFIC ITEMS
+========================================
+*/
+button{
+  background: #1865f2;
+  border: none;
+  border-radius: 4px;
+  font:  bold 1.4rem/1.96rem 'Lato', 'Noto Sans', 'Helvetica', 'Corbel', sans-serif, 'Helvetica', 'Corbel', sans-serif;
+  color: white;
+  letter-spacing: .05rem;
+  padding: 0 16px;
+  height: 40px;
+}
+
+input{
+ background: #f0f1f2;
+ background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fpi5%2FX8b%2Fpi5X8bd5T.png&f=1&nofb=1");
+ background-size: 12px;
+ background-position: 97% 50%;
+ background-repeat: no-repeat;
+ border: 2px solid #f0f1f2;
+ border-radius: 3px;
+ width: 150px;
+ text-align: left;
+}
+
+.logo{
+  height: 3rem;
+}
+
+
+/*
+  ========================================
+  INTERACTIVE
+  ========================================
+*/
+a:link, a:visited, button a:link, button a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color: grey;
+  transition: transform 0.5s;
+}
+
+button:hover{
+  transform: translateY(5px);
+  transition: transform 0.5s;
+}
+/*
+  ========================================
+  MEDIA QUERIES
+  ========================================
+*/
+@media (max-width: 3000px) and (min-width: 1101px){
+  .tablet, .mobile{
+    display: none;
+  }
+}
+@media (max-width: 1100px){
+  .mainStuff{
+    padding: 2% 5%;
+  }
+  .laptop{
+    display: none;
+  }
+  button{
+    width: 200px;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 900px){
+  .mainstuff{
+    padding: 1.5% 2%;
+  }
+}
+
+@media (max-width: 700px){
+  .noMobile{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
+  
+  header{
+    justify-content: space-between;
+  }
+  
+  .logo{
+    align-self: flex-start;
+  }
+  
+  .mainImg{
+    display: none;
+  }
+  
+  .mainStuff{
+    display: flex;
+    padding: 1.5% 10%;
+  }
+  .mainText{
+    justify-content: space-between;
+  }
+  button{
+    justify-content: center;
+    align-items: center;
+  }
+}
