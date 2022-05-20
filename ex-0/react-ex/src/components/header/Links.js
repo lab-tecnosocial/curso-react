@@ -1,6 +1,15 @@
+
+
+const style = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    alignItems: 'stretch'
+}
+
 export default function Links() {
     return (
-        <ul class="no-mobile">
+        <ul class="no-mobile" style={style}>
           <li>
             <a href="">
               Donate
