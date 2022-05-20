@@ -1,8 +1,6 @@
 
 /*
-  ========================================
-  BASE COLORS & FONTS
-  ========================================
+ base color and fonts
 */
 
 html{
@@ -33,17 +31,13 @@ p{
 }
 
 /*
-  ========================================
-  BACKGROUNDS
-  ========================================
+  backgrounds
 */
 body{
   background: white;
 }
 /*
-  ========================================
-  MAIN LAYOUT
-  ========================================
+  main layout
 */
 header{
   width: 100%;
@@ -58,7 +52,7 @@ main{
   display: block;
 }
 
-.mainStuff{
+.hero{
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -66,7 +60,7 @@ main{
   content: overflow;
 }
 
-.mainImg, .mainText{
+.main-left, .main-right{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -75,21 +69,19 @@ main{
   height: 100%;
 }
 
-.mainImg{
+.main-left{
   margin: 10px 22px 0 0;
   height: auto;
 }
 
-.mainText{
+.main-right{
   display: flex;
   text-align: left;
   justify-content: center;
   padding-top: 5%;
 }
 /*
-  ========================================
-  MINI LAYOUT
-  ========================================
+ mini layout header
 */
 header section ul{
   display: flex;
@@ -119,9 +111,7 @@ h1, p{
 }
 
 /*
-========================================
-SPECIFIC ITEMS
-========================================
+  items
 */
 button{
   background: #1865f2;
@@ -136,7 +126,7 @@ button{
 
 input{
  background: #f0f1f2;
- background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fpi5%2FX8b%2Fpi5X8bd5T.png&f=1&nofb=1");
+ background-image: url("lupa.png");
  background-size: 12px;
  background-position: 97% 50%;
  background-repeat: no-repeat;
@@ -152,9 +142,7 @@ input{
 
 
 /*
-  ========================================
-  INTERACTIVE
-  ========================================
+  interactive
 */
 a:link, a:visited, button a:link, button a:visited{
   text-decoration: none;
@@ -171,9 +159,7 @@ button:hover{
   transition: transform 0.5s;
 }
 /*
-  ========================================
-  MEDIA QUERIES
-  ========================================
+  media queries
 */
 @media (max-width: 3000px) and (min-width: 1101px){
   .tablet, .mobile{
@@ -181,7 +167,7 @@ button:hover{
   }
 }
 @media (max-width: 1100px){
-  .mainStuff{
+  .hero{
     padding: 2% 5%;
   }
   .laptop{
@@ -194,38 +180,27 @@ button:hover{
 }
 
 @media (min-width: 900px){
-  .mainstuff{
+  .hero{
     padding: 1.5% 2%;
   }
 }
 
 @media (max-width: 700px){
-  .noMobile{
+  .no-mobile{
     display: none;
   }
   .mobile{
     display: flex;
   }
   
-  header{
-    justify-content: space-between;
-  }
-  
   .logo{
     align-self: flex-start;
   }
   
-  .mainImg{
+  .main-left{
     display: none;
   }
   
-  .mainStuff{
-    display: flex;
-    padding: 1.5% 10%;
-  }
-  .mainText{
-    justify-content: space-between;
-  }
   button{
     justify-content: center;
     align-items: center;
