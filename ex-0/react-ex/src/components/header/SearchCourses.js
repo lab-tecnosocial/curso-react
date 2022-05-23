@@ -7,7 +7,8 @@ const style = {
 
 export default function SearchCourses() {
     return (
-    <ul className="no-mobile" style={style}>
+      <section>
+          <ul className="no-mobile" style={style}>
         <li>
           <a href="">
             Courses
@@ -17,5 +18,8 @@ export default function SearchCourses() {
           <input type="search" id="search-option" name="q" placeholder="Search" />
         </li>
       </ul>
+      </section>
     );
+      
+  
 }

@@ -4,9 +4,12 @@ const style = {
 }
 export default function Logo(){
     return (
-        <img style={style}
+        <section className="logo-wrapper">
+            <img style={style}
             src={logoImage}
             className="logo" alt="This is the Khan Academy logo."/>
+        </section>
+
 
     );
 }

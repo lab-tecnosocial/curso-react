@@ -1,23 +1,13 @@
-import SearchCourses from './SearchCourses'
+import SearchCourses from './SearchCourses';
 import Links from './Links';
-import Logo from './Logo'
-import './Header.css'
+import Logo from './Logo';
 
-const style = {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'spaceAround',
-    height: '60px',
-    borderBottom: '1px solid grey'
-}
-
-export default function Headers(){
+export default function Header(){
     return (
-        <div style={style}>
+        <header>
             <SearchCourses />
             <Logo />
             <Links />
-        </div>
+        </header>
     )
 }

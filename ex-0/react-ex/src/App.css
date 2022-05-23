@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+
+/*
+ base color and fonts
+*/
+
+html{
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Lato', 'Noto Sans', 'Helvetica', 'Corbel', sans-serif, 'Helvetica', 'Corbel', sans-serif;
+  color: #21242c
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li, input{
+  color: #1865f2;
+  font-size:1.6rem;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4.5rem;
+}
+
+p{
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+/*
+  backgrounds
+*/
+body{
+  background: white;
+}
+/*
+  main layout
+*/
+header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  border-bottom: 1px solid grey;
+}
+
+main{
+  display: block;
+}
+
+.hero{
+  display: flex !important;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 2% 10%;
+  content: overflow;
+}
+
+.main-left, .main-right{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 20vw;
+  height: 100%;
+}
+
+.main-left{
+  margin: 10px 22px 0 0;
+  height: auto;
+}
+
+.main-right{
+  display: flex;
+  text-align: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 5%;
+}
+/*
+ mini layout header
+*/
+header section ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+main ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+li{
+  display: block;
+  list-style-type: none;
+  padding: 1rem;
+}
+
+span{
+  display: block;
+}
+
+h1, p{
+  padding-bottom: 1rem;
+}
+
+/*
+  items
+*/
+button{
+  background: #1865f2;
+  border: none;
+  border-radius: 4px;
+  font:  bold 1.4rem/1.96rem 'Lato', 'Noto Sans', 'Helvetica', 'Corbel', sans-serif, 'Helvetica', 'Corbel', sans-serif;
   color: white;
+  letter-spacing: .05rem;
+  padding: 0 16px;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+input{
+ background: #f0f1f2;
+ /* background-image: url(""); */
+ background-size: 12px;
+ background-position: 97% 50%;
+ background-repeat: no-repeat;
+ border: 2px solid #f0f1f2;
+ border-radius: 3px;
+ width: 150px;
+ text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo{
+  height: 3rem;
+}
+
+
+/*
+  interactive
+*/
+a:link, a:visited, button a:link, button a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color: grey;
+  transition: transform 0.5s;
+}
+
+button:hover{
+  transform: translateY(5px);
+  transition: transform 0.5s;
+}
+/*
+  media queries
+*/
+@media (max-width: 3000px) and (min-width: 1101px){
+  .tablet, .mobile{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 1100px){
+  .hero{
+    padding: 2% 5%;
+  }
+  .laptop{
+    display: none;
+  }
+  button{
+    width: 200px;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 900px){
+  .hero{
+    padding: 1.5% 2%;
+  }
+}
+
+@media (max-width: 700px){
+  .no-mobile{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
+  
+  .logo{
+    align-self: flex-start;
+  }
+  
+  .main-left{
+    display: none;
+  }
+  
+  button{
+    justify-content: center;
+    align-items: center;
   }
 }
