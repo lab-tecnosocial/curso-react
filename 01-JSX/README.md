@@ -1,5 +1,59 @@
 # JSX
 
+## Instalar y crear apps de React
+
+Para poder desarrollar React localmente debemos instalar las siugientes herramientas:
+- [Node.js](https://nodejs.org/). Para crear proyectos de JavaScript en la computadora y más allá del navegador.
+- [npm](https://www.npmjs.com/). Para gestionar y descargar librerias de JavaScript. Se instala por defecto junto a Node.js.
+- [Create react app](https://create-react-app.dev/). Para configurar proyectos de react con un solo comando.
+
+Una vez hemos instalado Node.js, podemos configurar proyectos de React con el siguiente comando:
+
+```shell
+npx create-react-app <mi-app>
+```
+
+Ese comando crea e instala la siguiente estructura:
+
+```shell
+mi-app
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── serviceWorker.js
+    └── setupTests.js
+```
+
+Para hacer correr el proyecto `npm start`. Si hubieras descargado el proyecto de un repo, antes necesitarás instalar las librerias necesarias con `npm install`.
+
+Explicamos los elementos más importantes:
+- `README.md`: Una descripción de tu proyecto
+- `node_modules`: Todas las librerias que descargues con `npm`
+- `package.json`: Cnfiguración y descripciones de librerias
+- `public/`: carpeta archivos públicos
+- `src/`: La carpeta más importante, aquí están los archivos JS que ejecutan React
+  - `index.js`: La raiz de la app. No hay mucho que hacer aquí
+  - `App.js`: Tu primer componente. Es lo que renderiza directamente React. Puedes modificarlo para ver cómo cambia el sitio web.
+  - Aquí también puedes crear una carpeta `components` donde crearás tus propios componentes.
+
+Si no logras instalar todo lo anterior, puedes usar un editor onlin que soporta react, como [Code Sandbox](https://codesandbox.io/).
+
+Opcionalmente puedes también instalar la siguiente extensión para depurar tu app de React en el navegador: [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl).
 ## ¿Qué es JSX?
 
 Parece un código híbrido entre JS y HTML:
