@@ -46,16 +46,16 @@ Una expresión JSX solo puede tener un elemento padre. Aquí una solución es a�
 ```jsx
 // da error
 const misParrafos = (
-	<p>Párrafo 1</p>
-	<p>Párrafo 2</p>
+  <p>Párrafo 1</p>
+  <p>Párrafo 2</p>
 );
 
 // solucion
 const misParrafos = (
-	<div>
-		<p>Párrafo 1</p>
-		<p>Párrafo 2</p>
-	</div>
+  <div>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+  </div>
 );
 ```
 

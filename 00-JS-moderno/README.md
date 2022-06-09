@@ -224,7 +224,7 @@ Primero se debe exportar los objetos con la palabra clave `export`. Se puede hac
 export const nombre = 'Juan Garcia';
 
 export function saludar(nombre) {
-	let	saludo = `Hola ${nombre}`;
+  let saludo = `Hola ${nombre}`;
   return saludo;
 }
 ```
@@ -246,8 +246,7 @@ Puedes renombrar las importaciones:
 
 ```js
 // main.js
-import {nombre as name,
-         saludar as funcionSaludar } from './modulos/saludo.js';
+import {nombre as name, saludar as funcionSaludar } from './modulos/saludo.js';
 ```
 
 ## Promises y Async await

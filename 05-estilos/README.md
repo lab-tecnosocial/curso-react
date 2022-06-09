@@ -14,13 +14,13 @@ Esta es la forma más tradicional, simplemente:
 import './mi-estilo.css';
 
 function Tarjeta(props){
-	return (
-		<div className="card-a">
-			<img src={props.img} />
-			<h1 className="titulo">{props.nombre}</h1>
-			<p>{props.desc}</p>
-		</div>
-	);
+  return (
+    <div className="card-a">
+      <img src={props.img} />
+      <h1 className="titulo">{props.nombre}</h1>
+      <p>{props.desc}</p>
+    </div>
+    );
 
 ```
 
@@ -30,18 +30,18 @@ Otra opción es definir CSS en un objeto JS, pero su sintaxis debe cumplir con J
 
 ```jsx
 const estilo = {
-	borderStyle: 'solid', 
-	backgroundColor: 'Snow'
+  borderStyle: 'solid', 
+  backgroundColor: 'Snow'
 }
 
 function Tarjeta(props){
-	return (
-		<div style={estilo}>
-			<img src={props.img} />
-			<h1>{props.nombre}</h1>
-			<p>{props.desc}</p>
-		</div>
-	);
+  return (
+      <div style={estilo}>
+        <img src={props.img} />
+        <h1>{props.nombre}</h1>
+        <p>{props.desc}</p>
+      </div>
+    );
 
 ```
 
@@ -52,12 +52,12 @@ O directamente poner estilos al atributo `style`:
 ```jsx
 function Tarjeta(props){
 	return (
-		<div style={{borderStyle: 'solid', backgroundColor: 'Snow'}}>
-			<img src={props.img} />
-			<h1>{props.nombre}</h1>
-			<p>{props.desc</p>
-		</div>
-	);
+  <div style={{borderStyle: 'solid', backgroundColor: 'Snow'}}>
+    <img src={props.img} />
+    <h1>{props.nombre}</h1>
+    <p>{props.desc</p>
+  </div>
+  );
 
 ```
 

@@ -7,13 +7,13 @@ Los props se reciben y se usan como un objeto en la definición del componente:
 ```jsx
 // Tarjeta.js
 export default function Tarjeta(props){
-	return (
-		<div>
-			<img src={props.img} />
-			<h1>{props.nombre}</h1>
-			<p>{props.desc</p>
-		</div>
-	);
+return (
+    <div>
+        <img src={props.img} />
+        <h1>{props.nombre}</h1>
+        <p>{props.desc</p>
+    </div>
+);
 }
 ```
 
@@ -46,11 +46,11 @@ const miObjeto = {
 function MiApp() {
   return (
     <>
-      <Tarjeta 
-				img={miObjeto.img} 
-				nombre={miObjeto.nombre} 
-				desc={miObjeto.desc} 
-			/>
+        <Tarjeta 
+            img={miObjeto.img} 
+            nombre={miObjeto.nombre} 
+            desc={miObjeto.desc} 
+        />
     </>
   );
 ```
@@ -62,29 +62,27 @@ Más aún, normalmente crearemos componentes a partir de un arreglo de objetos o
 import MiTarjeta from './MiTarjeta';
 
 const docentes = [
-	{
-		img: 'https://picsum.photos/200',
-		nombre: 'Juan Garcia',
-		desc: 'Docente'
-	},
-	{
-		img: 'https://picsum.photos/200',
-		nombre: 'Luis Mena',
-		desc: 'Docente'
-	},
-	{
-		img: 'https://picsum.photos/200',
-		nombre: 'Carlos fuentes',
-		desc: 'Docente'
-	}
+    {
+        img: 'https://picsum.photos/200',
+        nombre: 'Juan Garcia',
+        desc: 'Docente'
+    },
+    {
+        img: 'https://picsum.photos/200',
+        nombre: 'Luis Mena',
+        desc: 'Docente'
+    },
+    {
+        img: 'https://picsum.photos/200',
+        nombre: 'Carlos fuentes',
+        desc: 'Docente'
+    }
 ];
 
 function MiApp() {
   return (
     <>
-			{
-				docentes.map(el => <Tarjeta img={el.img} nombre={el.nombre} desc={el.des} />)
-			}
+        { docentes.map(el => <Tarjeta img={el.img} nombre={el nombre} desc={el.des} />) }
     </>
   );
 ```

@@ -9,7 +9,7 @@ Nos permite almacenar un estado (valor, arreglo, objeto) de un componente y actu
 Dicho de otra forma la UI **reacciona** al estado:
 
 $$
- ⁍
+ \text{UI} = f(\text{estado})
 $$
 
 Esa es una de las características esenciales de React.

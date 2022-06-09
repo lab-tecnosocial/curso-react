@@ -11,7 +11,7 @@ El nombre de la función se da en PascalCase y devuelve JSX. Normalmente crearem
 ```jsx
 // MiBoton.js
 export default function MiBoton() {
-	// más logica de JavaScript
+  // más logica de JavaScript
   return <button>Clic</button>;
 }
 ```
