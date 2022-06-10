@@ -1,8 +1,8 @@
 # Props
 
-Al igual que las etiquetas de HTML pueden recibir ciertos datos en sus atributos para personalizar su apariencia y comportamiento, también los componentes pueden recibir propiedades, llamados `props`.
+Al igual que las etiquetas de HTML pueden recibir ciertos datos en sus atributos para personalizar su apariencia y comportamiento, también los componentes pueden recibir propiedades, llamadas en React como `props`. También puedes pensar en ellos como atributos personalizados.
 
-Los props se reciben y se usan como un objeto en la definición del componente:
+Los props son las entradades de los componentes función. Y se usan como un objeto en el cuerpo del componente:
 
 ```jsx
 // Tarjeta.js
@@ -13,11 +13,11 @@ return (
         <h1>{props.nombre}</h1>
         <p>{props.desc</p>
     </div>
-);
+  );
 }
 ```
 
-Y en las instancias del componente se pasan como `clave=valor`:
+Y en las instancias del componente los props se pasan como `clave=valor` al estilo HTML:
 
 ```jsx
 // MiApp.js
@@ -55,7 +55,7 @@ function MiApp() {
   );
 ```
 
-Más aún, normalmente crearemos componentes a partir de un arreglo de objetos o un JSON local o que venga de una API, para lo cual debemos usar el método `map()`:
+Más aún, normalmente crearemos componentes a partir de un arreglo de objetos o un JSON local o de una API, para lo cual debemos usar el método `map()`:
 
 ```jsx
 // MiApp.js
@@ -86,7 +86,22 @@ function MiApp() {
     </>
   );
 ```
+Otra forma de usar los props en los componentes es desestructurandolos:
+
+```jsx
+// Tarjeta.js
+export default function Tarjeta({ img, nombre, desc }){
+return (
+    <div>
+        <img src={img} />
+        <h1>{nombre}</h1>
+        <p>{desc</p>
+    </div>
+  );
+}
+```
+Los props también sirven para pasar datos de componentes padre a componentes hijo. Y pueden recibir tanto valores como funciones.
 
 ## Ejercicio 2
 
-En la carpeta `ej-2-props` podrás encontrar otra demostración sobre props. El ejercicio es hacer una tabla con los mismos datos.
+En la carpeta `ej-2-props` podrás encontrar otra demostración sobre props. El **reto** es hacer una tabla con los mismos datos.

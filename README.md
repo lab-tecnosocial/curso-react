@@ -1,6 +1,6 @@
 # Curso React
 
-Materiales del curso de "Desarrollo frontend con React" dirigido a voluntarios del área de desarrollo informático del LabTecnoSocial 2022.
+Materiales del curso de "Desarrollo frontend con React" dirigido a voluntarios del área de desarrollo informático del LabTecnoSocial, 2022.
 
 Pre-requisitos: conocimiento de HTML, CSS y JS.
 

@@ -1,10 +1,10 @@
 # Hooks
 
-Los “hooks” son funciones que comienzan con la palabra `use` y que permiten “engancharse” o “conectarse” a algunas funcionalidades clave de React. Los principales hooks son `useState()` para hacer que el componente guarde y actualice un estado (memoria) y `useEffect` para sincronizar acciones (*side effects*) en función de ciertos eventos.
+Los “hooks” son funciones que comienzan con la palabra `use` y que permiten “engancharse” a algunas funcionalidades clave de React. Los principales hooks son `useState()` para hacer que el componente guarde y actualice un estado (memoria) y `useEffect` para sincronizar acciones (*side effects*) en función de ciertos eventos.
 
 ## useState
 
-Nos permite almacenar un estado (valor, arreglo, objeto) de un componente y actualizarlo. La utilidad de este estado es que al actualizarlo la apariencia del componente se vuelve a renderizar, creando interactividad. 
+Nos permite almacenar un estado (valor, arreglo, objeto) dentro de un componente y actualizarlo. La utilidad del estado es que al actualizarlo la apariencia del componente se vuelve a renderizar (o repintar) automáticamente:
 
 Dicho de otra forma la UI **reacciona** al estado:
 
@@ -15,16 +15,6 @@ $$
 Esa es una de las características esenciales de React.
 
 El primer ejemplo que daremos es la construcción de un contador:
-
-- Importamos el hook de la libreria de React
-- Al inicio de nuestro componente usamos el hook, desestructurando lo que devuelve que son dos cosas:
-    - El nombre del estado
-    - El nombre de una función para actualizar el estado, que siempre empiece con `set`
-- El hook de useState recibe un parametro que es el valor inicial del estado
-- Ya en el elemento JSX que devuelve el componente, podemos usar el estado donde querramos.
-- El botón, u otro elemento de interacción, tienen “event listeners” que son funciones de alto orden que reciben otra función (”event handler”) que se ejecutarán cuando el usuario realiza alguna interacción, por ejemplo: onClick, onMouseOver, etc. (notar la capitalización de cada palabra).
-    - Entonces allí le pasamos una función que contiene la función de actualización de estado, entre otra lógica
-    - Nunca se debe actualizar el estado directamente, solo mediante la función que devuelve useState
 
 ```jsx
 import React, { useState } from 'react';
@@ -42,6 +32,16 @@ function Contador() {
   );
 }
 ```
+Donde:
+- Importamos el hook de la libreria de React
+- Al inicio de nuestro componente usamos el hook, desestructurando lo que devuelve, que son dos cosas:
+    - Una variable estado
+    - Una función para actualizar el estado, que siempre empiece con `set`
+- El hook de useState recibe un parametro que es el valor inicial del estado
+- Ya en el elemento JSX que devuelve el componente, podemos usar el estado donde querramos.
+- El botón, u otro elemento de interacción, tienen “event listeners” que son funciones de alto orden que reciben otra función (”event handler”) que se ejecutarán cuando el usuario realiza alguna interacción, por ejemplo: onClick, onMouseOver, etc. (notar la capitalización de cada palabra).
+    - Entonces allí le pasamos una función que contiene la función de actualización de estado.
+    - Nunca se debe actualizar el estado directamente, solo mediante la función que devuelve useState
 
 Una segunda versión de esta contador tiene dos botones y dos *event handlers* diferentes.
 
@@ -73,17 +73,17 @@ function ContadorDos() {
 
 En la carpeta `ej-3-contador` puedes ver un ejemplo de contador escrito en JS vanilla (normal) y otro en React. Puedes ver que es mucho más directo e intuitivo escribirlo en React. 
 
-El reto ahora es escribir el estado en vez de un valor numérico un objeto completo que haga cambiar la apariencia de una tarjeta cuando el mouse se pone encima de él.
+El **reto** ahora es manejar en el estado un objeto completo que haga cambiar la apariencia de una tarjeta cuando el mouse se pone encima de él.
 
 ## useEffect
 
-El hook `useEffect` permite realizar acciones (side effects) como traer datos de una API y actualizar el DOM, según el ciclo de vida del componente. Esta función acepta dos argumentos: `useEffect(<funcion>, <dependencia>)` y tiene cuatro variaciones:
+El hook `useEffect` permite realizar acciones (*side effect*s) como traer datos de una API y actualizar el DOM, según el ciclo de vida del componente. Esta función acepta dos argumentos: `useEffect(<funcion>, <dependencia>)` y tiene cuatro variaciones:
 
 Cuando no le pasamos una dependencia, entonces se ejecuta en cada renderizado:
 
 ```jsx
 useEffect(() => {
-	// codigo
+  // codigo
 });
 ```
 
@@ -91,11 +91,11 @@ Cuando le pasamos una dependencia vacía, entonces se ejecuta solo en el primer 
 
 ```jsx
 useEffect(() => {
-	// codigo
+  // codigo
 }, []);
 ```
 
-Cuando le pasamos algunas variables (estado o prop) se ejecuta en el primer renderizada y cada vez que cambien sus valores
+Cuando le pasamos algunas variables (estado o prop) se ejecuta en el primer renderizado y cada vez que cambien sus valores
 
 ```jsx
 useEffect(() => {
@@ -107,8 +107,8 @@ Si usamos un `return`, este se usará como una función de limpieza para algunos
 
 ```jsx
 useEffect(() => {
-	// codigo
-	return () => // cleanup ;
+  // codigo
+  return () => // cleanup ;
 }, []);
 ```
 
@@ -150,6 +150,6 @@ function ContadorTres() {
 
 ### Ejercicio 4
 
-En la carpeta `ej-4-usetate-useffect` puedes encontrar un ejemplo de un procedimiento que realizarás constantemente: traer datos de una API y renderizarlos en componentes de React, usando al mismo tiempo `useState()` y `useEffect()`. Usamos una API de Naruto para este caso ;).
+En la carpeta `ej-4-usetate-useffect` puedes encontrar un ejemplo de un procedimiento que realizarás constantemente: traer datos de una API y renderizarlos en componentes de React, usando al mismo tiempo `useState()` y `useEffect()`. Usamos una API de Naruto para este caso 🌀.
 
-El reto ahora es que hagas algo similar con cualquier otra API disponible que te interese y lo renderices en componentes de tarjetas.
+El **reto** ahora es que hagas algo similar con cualquier otra API disponible que te interese y lo renderices en componentes de tarjetas.

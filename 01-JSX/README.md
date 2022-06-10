@@ -1,11 +1,11 @@
 # JSX
 
-## Instalar y crear apps de React
+## Instalar Node.js y crear apps de React
 
-Para poder desarrollar React localmente debemos instalar las siugientes herramientas:
-- [Node.js](https://nodejs.org/). Para crear proyectos de JavaScript en la computadora y más allá del navegador.
+Para poder desarrollar React localmente debemos contar con las siguientes herramientas:
+- [Node.js](https://nodejs.org/). Para crear proyectos de JavaScript en una computadora (local o servidor) e ir más allá del navegador. Instalar.
 - [npm](https://www.npmjs.com/). Para gestionar y descargar librerias de JavaScript. Se instala por defecto junto a Node.js.
-- [Create react app](https://create-react-app.dev/). Para configurar proyectos de react con un solo comando.
+- [Create react app](https://create-react-app.dev/). Para configurar proyectos de react con un solo comando. Se ejecuta cuando ya tenemos todo lo anterior.
 
 Una vez hemos instalado Node.js, podemos configurar proyectos de React con el siguiente comando:
 
@@ -39,34 +39,38 @@ mi-app
     └── setupTests.js
 ```
 
-Para hacer correr el proyecto `npm start`. Si hubieras descargado el proyecto de un repo, antes necesitarás instalar las librerias necesarias con `npm install`.
-
-Explicamos los elementos más importantes:
-- `README.md`: Una descripción de tu proyecto
+Explicamos los elementos más importantes de esta estructura:
+- `README.md`: Una descripción de tu proyecto en Markdown.
 - `node_modules`: Todas las librerias que descargues con `npm`
-- `package.json`: Cnfiguración y descripciones de librerias
-- `public/`: carpeta archivos públicos
+- `package.json`: Configuración y descripciones de librerias
+- `public/index.html`: Contiene HTML normal, pero que no usaremos sino que será solo un punto de entrada para React.
 - `src/`: La carpeta más importante, aquí están los archivos JS que ejecutan React
-  - `index.js`: La raiz de la app. No hay mucho que hacer aquí
-  - `App.js`: Tu primer componente. Es lo que renderiza directamente React. Puedes modificarlo para ver cómo cambia el sitio web.
+  - `index.js`: Aquí se crea la raiz de la app vinculandola a `index.html`. No hay mucho que hacer aquí
+  - `App.js`: Tu primer componente. Es lo que renderiza directamente React. Puedes modificarlo con JSX para ver cómo cambia el sitio web.
   - Aquí también puedes crear una carpeta `components` donde crearás tus propios componentes.
 
-Si no logras instalar todo lo anterior, puedes usar un editor onlin que soporta react, como [Code Sandbox](https://codesandbox.io/).
+Para hacer correr el proyecto usamos `npm start` y nos debe aparecer en el navegador la siguiente página:
+
+![](../img/react-page.png)
+
+Si hubieras descargado el proyecto de un repo de GitHub o de otra persona, antes necesitarás instalar las librerias localment necesarias con `npm install` y luego recién ejecutar `npm start`.
+
+
+Si no logras instalar todo lo anterior, puedes usar un editor online que soporta React, como [Code Sandbox](https://codesandbox.io/).
 
 Opcionalmente puedes también instalar la siguiente extensión para depurar tu app de React en el navegador: [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl).
 ## ¿Qué es JSX?
 
-Parece un código híbrido entre JS y HTML:
+Esta es una exprexión en JSX:
 
 ```jsx
 const h1 = <h1>Hola mundo</h1>;
 ```
-
-En realidad es JS pero extendido con sintaxis de HTML estricto. Es JSX, se escribe en archivos nombrados `*.js` y  no en `*.html`
+Parece un código híbrido entre JS y HTML. Pero en realidad es JS pero extendido con sintaxis de HTML estricto. Se escribe en archivos nombrados `*.js` y  no en `*.html`
 
 ## Elementos JSX
 
-Un elemento JSX es una representación del DOM y por tanto de la UI. Pueden ser guardados en una variable, pasados a una función, guardados en un arreglo u objeto, etc.
+Un elemento JSX es una representación del DOM y por tanto de la UI. También puedes pensarlo como un agrupamiento de elementos de HTML. Pueden ser guardados en una variable, pasados a una función, guardados en un arreglo u objeto, etc.
 
 Ejemplos:
 
@@ -81,7 +85,7 @@ const miEquipo = {
 
 ## Multilínea
 
-Si la expresión de JSX abarcar varias líneas, entonces necesita un paréntesis”
+Si la expresión de JSX abarcar varias líneas, entonces necesitará un paréntesis:
 
 ```jsx
 const myList = (
@@ -95,7 +99,7 @@ const myList = (
 
 ## Elemento padre de JSX
 
-Una expresión JSX solo puede tener un elemento padre. Aquí una solución es añadir `<div></div>` o un fragmento `<></>` que es un elemento vacío.
+Una expresión JSX solo puede tener un elemento padre. Si tiene varios padres, entonces una solución es envolverlo en un `<div></div>` o un fragmento `<></>` que es un elemento vacío.
 
 ```jsx
 // da error
@@ -129,9 +133,7 @@ const miLista = (
   </ul>
 );
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot( document.getElementById('root'));
 root.render(miLista);
 ```
 
@@ -167,7 +169,7 @@ En JSX es necesario cerrar siempre los tags:
 
 ## Inyectar JS dentro de JSX
 
-Podemos inyectar JavaScript, sea una variable, una propiedad de un objeto, una llamada a una función, una expresión, etc. Para eso debemos usar las llaves `{}.`
+Podemos inyectar JavaScript en JSX, combinando HTML tradicioal con JS en una sola expresión. Ya sea una variable, una propiedad de un objeto, una llamada a una función, una expresión, etc. Para eso debemos usar las llaves `{}`
 
 Una expresión:
 
@@ -205,3 +207,4 @@ const buho = (
 );
 
 ```
+Las llaves `{}` sirven como un símbolo de escape.
