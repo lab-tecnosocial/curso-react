@@ -1,6 +1,6 @@
 # JS Moderno
 
-React hace uso de las últimas características de JavaScript. Es por eso que debes conocer las últimas variantes de algunas funciones JS tanto para leer el código en React escrito por otros como para embarcarte en su desarrollo.
+React hace uso de las últimas características de JavaScript. Es por eso que debes conocer las últimas variantes de algunas funciones de JS, tanto para leer el código en React escrito por otros como para embarcarte en su desarrollo.
 
 ## Tres formas de declarar de funciones
 
@@ -77,8 +77,8 @@ const miVehiculo = {
 }
 
 const actualizarVehiculo = {
-  type: 'Auto',
-  year: 2021, 
+  tipo: 'Auto',
+  anio: 2021, 
   color: 'Amarillo'
 }
 

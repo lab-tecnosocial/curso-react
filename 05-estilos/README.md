@@ -27,14 +27,14 @@ function Tarjeta(props){
 ## Objeto de estilo (CSS in JS)
 
 Otra opción es definir CSS en un objeto JS, pero su sintaxis debe cumplir con JS:
-- Los nombres de las propiedades en vez de en kebab-case deben estar en camel-case
+- Los nombres de las propiedades en vez de en kebab-case deben estar en camelCase
 - Los valores si no son numéricos se pasan siempre en string
 - Las propiedades se separan con comas:
 
 ```jsx
 const estilo = {
   borderStyle: 'solid', 
-  backgroundColor: 'Snow'
+  backgroundColor: 'snow'
 }
 
 function Tarjeta(props){
