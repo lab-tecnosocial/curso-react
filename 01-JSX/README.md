@@ -64,9 +64,18 @@ Opcionalmente puedes también instalar la siguiente extensión para depurar tu a
 Esta es una exprexión en JSX:
 
 ```jsx
-const h1 = <h1>Hola mundo</h1>;
+const h1 = <h1 className="titulo">Hola mundo</h1>;
 ```
-Parece un código híbrido entre JS y HTML. Pero en realidad es JS pero extendido con sintaxis de HTML estricto. Se escribe en archivos nombrados `*.js` y  no en `*.html`
+Parece un código híbrido entre JS y HTML. Pero en realidad es JS pero extendido con sintaxis de HTML estricto. Se escribe en archivos nombrados `*.js` y  no en `*.html`. En React el marcado y la lógica conviven y no se separán como en otros enfoques.
+
+Se podría generar también de esta forma, pero es más conveniente usar el estilo tipo HTML:
+```js
+const element = React.createElement(
+  'h1',
+  {className: 'titulo'},
+  'Hola mundo'
+);
+```
 
 ## Elementos JSX
 
@@ -190,8 +199,8 @@ Usando propiedades de objetos:
 
 ```jsx
 const imgs = {
-  panda: "http://bit.ly/1Tqltv5",
-  buho: "http://bit.ly/1XGtkM3",
+  panda: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Giant_Panda_2004-03-2.jpg/800px-Giant_Panda_2004-03-2.jpg",
+  buho: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bubo_bubo_sibiricus_-_01.JPG/400px-Bubo_bubo_sibiricus_-_01.JPG",
 }; 
 
 const panda = (

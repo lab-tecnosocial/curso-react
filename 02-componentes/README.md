@@ -37,7 +37,11 @@ Al igual que la estructura en árbol de HTML, los componentes de react también 
 
 En la carpeta `ej-1-componentes` podrás encontrar el primer ejercicio de componentes. Allí encontrarás dos carpetas: una llamada `vanilla` donde está una parte del sitio web de Khan Academy creada usando solamente HTML y CSS normal; la otra llamada `react` donde se encuentra una app de React. 
 
-El **reto** es rehacer el mismo sitio pero usando componentes de React. Es un ejercicio de maquetado, queda a tu elección cómo agrupar los componentes. Aquí te mostramos un posible árbol de componentes:
+El **reto** es rehacer el mismo sitio pero usando componentes de React. Es un ejercicio de maquetado, queda a tu elección cómo agrupar los componentes:
+
+![](../img/sitio-khan.png)
+
+Aquí te mostramos un posible árbol de componentes:
 
 ![](../img/arbol-components.png)
 
