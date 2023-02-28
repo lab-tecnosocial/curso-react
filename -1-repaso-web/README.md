@@ -5,7 +5,9 @@
 - Sitio web vs. app web
 - Arquitecturas de una app web
   - MPA. Varias páginas HTML renderizadas en el servidor (backend)
+    - ej: Django, ASP.Net, Laravel
   - SPA. Una sola página renderizadas en el cliente (frontend)
+    - ej: Angular, React
 - Tecnologías web frontend
   - HTML. Lenguaje de marcado. Estructura y contenido, el esqueleto
   - CSS. Lenguaje de estilo. Estilo, la pinta
@@ -25,6 +27,9 @@
       - Declaracion o regla
       - Propiedad y valor
   - JS
+    - Elementos de cualquier lenguaje de programación
+    - Corre en el navegador
+    - Manipulación del DOM
 
 ## HTML
 
@@ -43,7 +48,7 @@
           - button
 
 ## CSS
-- Vincular CSS *?
+- Vincular CSS
 - Añadir clases
   - header
   - h1
@@ -99,7 +104,7 @@
     - opacity
 ## JS
 
-- Vincular JS *?
+- Vincular JS
 - Estructura general del archivo
   - Selectores
     - entrada-tarea para capturar el input
