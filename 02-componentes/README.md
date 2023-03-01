@@ -46,3 +46,9 @@ Aquí te mostramos un posible árbol de componentes:
 ![](../img/arbol-components.png)
 
 El proyecto se creó con `create-react-app`. Puedes hacerlo correr dando `npm install` para instalar los modulos necesarios y luego `npm start` para correr el servidor de desarrolo.
+
+## Ejercicio 2
+
+En la misma carpeta puedes encontrar el segundo ejercicio, donde debes maquetar la app de lista de tareas que hicimos al inicio. Una posible opción de arbol de componentes es la siguiente:
+
+![](../img/arbol-components-2.png)
