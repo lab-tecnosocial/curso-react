@@ -15,7 +15,7 @@ function App() {
         <div className="contenedor-tareas">
           <ul className="lista-tareas">
             {tareas.map((tarea) => {
-              return <Item texto={tarea.texto} key={tarea.id} tareas={tareas} completado={tarea.completado} setTareas={setTareas} /> 
+              return <Item tarea={tarea} key={tarea.id} tareas={tareas} setTareas={setTareas} /> 
             })
             }
           </ul>
