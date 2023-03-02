@@ -1,11 +1,30 @@
-function Item(props) {
+function Item({texto, tareas, setTareas, completado}) {
+    
+    const handleCompletado = () => {
+        const nuevasTareas = tareas.map((tarea) => {
+            if (tarea.texto === texto) {
+                return {...tarea, completado: !tarea.completado}
+            }
+            return tarea;
+        })
+        setTareas(nuevasTareas);
+    }
+
+    const handleEliminado = () => {
+        const nuevasTareas = tareas.filter((tarea) => {
+            return tarea.texto !== texto;
+        })
+        setTareas(nuevasTareas);
+    }
+
+
     return (
-        <div class="tarea">
-            <li class="tarea-item">
-                {props.tarea}
+        <div className={`tarea ${ completado && 'completado'}`}>
+            <li className="tarea-item">
+                {texto}
             </li>
-            <button class="boton-completado">O</button>
-            <button class="boton-eliminado">X</button>
+            <button onClick={handleCompletado} className="boton-completado">O</button>
+            <button onClick={handleEliminado} className="boton-eliminado">X</button>
         </div>
 
     )
