@@ -13,7 +13,7 @@ function App() {
   const getDataFromAPI = async () => {
     try {
       const response = await fetch(
-        "https://naruto-api.herokuapp.com/api/v1/characters"
+        "https://naruto-api.fly.dev/api/v1/characters"
       );
       await response.json().then((data) => {
         setPersonajes(data);

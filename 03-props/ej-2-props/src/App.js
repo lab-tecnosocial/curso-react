@@ -15,7 +15,7 @@ const products = [
 ];
 function App() {
   return (
-    <div>
+    <div >
       Ejercicio Props
       <hr/>
       {
