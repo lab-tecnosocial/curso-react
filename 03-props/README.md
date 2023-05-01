@@ -2,7 +2,7 @@
 
 Al igual que las etiquetas de HTML pueden recibir ciertos datos en sus atributos para personalizar su apariencia y comportamiento, también los componentes pueden recibir propiedades, llamadas en React como `props`. También puedes pensar en ellos como atributos personalizados.
 
-Los props son las entradades de los componentes función. Y se usan como un objeto en el cuerpo del componente:
+Los props son las entradas de los componentes función. Y se usan como un objeto en el cuerpo del componente:
 
 ```jsx
 // Tarjeta.js

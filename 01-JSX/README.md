@@ -53,7 +53,7 @@ Para hacer correr el proyecto usamos `npm start` y nos debe aparecer en el naveg
 
 ![](../img/react-page.png)
 
-Si hubieras descargado el proyecto de un repo de GitHub o de otra persona, antes necesitarás instalar las librerias localment necesarias con `npm install` y luego recién ejecutar `npm start`.
+Si hubieras descargado el proyecto de un repo de GitHub o de otra persona, antes necesitarás instalar las librerias localmente necesarias con `npm install` y luego recién ejecutar `npm start`.
 
 
 Si no logras instalar todo lo anterior, puedes usar un editor online que soporta React, como [Code Sandbox](https://codesandbox.io/).
