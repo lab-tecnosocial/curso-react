@@ -3,60 +3,70 @@
 ## Instalar Node.js y crear apps de React
 
 Para poder desarrollar React localmente debemos contar con las siguientes herramientas:
-- [Node.js](https://nodejs.org/). Para crear proyectos de JavaScript en una computadora (local o servidor) e ir más allá del navegador. Instalar.
+- [Node.js](https://nodejs.org/). Para crear proyectos de JavaScript en una computadora (de escritorio o servidor) e ir más allá del navegador. Instalar.
 - [npm](https://www.npmjs.com/). Para gestionar y descargar librerias de JavaScript. Se instala por defecto junto a Node.js.
-- [Create react app](https://create-react-app.dev/). Para configurar proyectos de react con un solo comando. Se ejecuta cuando ya tenemos todo lo anterior.
+- [Vite](https://vitejs.dev/). Para configurar proyectos de react con un solo comando. Se ejecuta cuando ya tenemos todo lo anterior.
 
 Una vez hemos instalado Node.js, podemos configurar proyectos de React con el siguiente comando:
 
 ```shell
-npx create-react-app <mi-app>
+npm create vite@latest <mi-app>
 ```
+Te preguntará el framework y debes elegir `react`. Luego te preguntará la variante y debes elegir `JavaScript`. 
 
-Ese comando crea e instala la siguiente estructura:
+Luego debes ingresar a la carpeta creada e instalar las librerias necesarias (dependencias) con los siguientes comandos:
 
 ```shell
-mi-app
-├── README.md
-├── node_modules
-├── package.json
+cd mi-app
+npm install
+```
+Abres el proyecto con VSCode y verás la siguiente estructura de carpetas y archivos:
+
+```shell
+.
+├── .eslintrc.cjs
 ├── .gitignore
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    ├── serviceWorker.js
-    └── setupTests.js
+├── README.md
+├── index.html
+├── node_modules/
+├── package-lock.json
+├── package.json
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets/
+│   ├── index.css
+│   └── main.jsx
+└── vite.config.js
 ```
 
-Explicamos los elementos más importantes de esta estructura:
-- `README.md`: Una descripción de tu proyecto en Markdown.
-- `node_modules`: Todas las librerias que descargues con `npm`
-- `package.json`: Configuración y descripciones de librerias
-- `public/index.html`: Contiene HTML normal, pero que no usaremos sino que será solo un punto de entrada para React.
-- `src/`: La carpeta más importante, aquí están los archivos JS que ejecutan React
-  - `index.js`: Aquí se crea la raiz de la app vinculandola a `index.html`. No hay mucho que hacer aquí
-  - `App.js`: Tu primer componente. Es lo que renderiza directamente React. Puedes modificarlo con JSX para ver cómo cambia el sitio web.
+Explicamos los elementos principales de esta estructura:
+- `index.html`: Contiene HTML normal, pero que no necesitamos editar sino que será solo un punto de entrada para React.
+- `public/`: Carpeta de archivos estáticos.
+- `src/`: La carpeta más importante, aquí están los archivos JSX que ejecuta React
+  - `index.jsx`: Aquí se crea la raiz de la app vinculando React a `index.html`. No hay mucho que hacer aquí
+  - `App.jsx`: Tu primer componente. Es lo que renderiza directamente React al iniciar el proyecto. Puedes modificarlo con JSX para ver cómo cambia el sitio web.
   - Aquí también puedes crear una carpeta `components` donde crearás tus propios componentes.
 
-Para hacer correr el proyecto usamos `npm start` y nos debe aparecer en el navegador la siguiente página:
+Explicamos los elementos secundarios
+- `README.md`: Una descripción de tu proyecto en Markdown.
+- `.gitignore`: Descripción de rchivos y carpetas que se ignorarán en los commits con Git.
+- `package.json`: Descripción de tu proyecto, las librerias de las que depende y configuración de scripts.
+- `package-lock.json`: Descripción detallada de la versión de las librerías y sus subdependencias.
+- `node_modules/`: Una carpeta donde se descargarán todas las librerias que descargues con `npm`.
+- `vite.config.js`: Configuración de Vite.
+- `.eslintrc.cjs`: Configuración del linter ES Lint (revisión de código y advertencias).
 
-![](../img/react-page.png)
+Para hacer correr el proyecto usamos `npm run dev` y nos generará una dirección local que hay que abrir (ej. ` Local:   http://127.0.0.1:5173/`). Y nos aparecerá en el navegador la siguiente página:
 
-Si hubieras descargado el proyecto de un repo de GitHub o de otra persona, antes necesitarás instalar las librerias localmente necesarias con `npm install` y luego recién ejecutar `npm start`.
+![](../img/react-vite.png)
+
+Si hubieras descargado el proyecto de un repo de GitHub o de otra persona, antes necesitarás instalar las librerias localmente necesarias con `npm install` y luego recién ejecutar `npm run dev`.
 
 
-Si no logras instalar todo lo anterior, puedes usar un editor online que soporta React, como [Code Sandbox](https://codesandbox.io/).
+Si no logras instalar todo lo anterior, puedes usar un editor online que soporta React, como [Code Sandbox](https://codesandbox.io/) o [StackBlitz](https://stackblitz.com/).
 
 Opcionalmente puedes también instalar la siguiente extensión para depurar tu app de React en el navegador: [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl).
 ## ¿Qué es JSX?
