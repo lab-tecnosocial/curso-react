@@ -33,7 +33,7 @@
 
 ## HTML
 
-- Esructura básica
+- Estructura básica
   - header
     - h1
   - main

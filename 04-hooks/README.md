@@ -133,7 +133,7 @@ function ContadorTres() {
   const [calculo, setCalculo] = useState(0);
 
   useEffect(() => {
-    setCalculo(() => conteo * 2); incrementa el doble
+    setCalculo(() => conteo * 2); //incrementa el doble
 		(conteo !== 0) & (conteo % 10) === 0 && alert(`Llegaste a ${conteo}`) // mensaje cada multiplo de 10
 		
   }, [conteo]); // dependencia

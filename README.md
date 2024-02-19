@@ -12,6 +12,7 @@ Contenidos:
 - [03-props](https://github.com/lab-tecnosocial/curso-react/tree/main/03-props)
 - [04-hooks](https://github.com/lab-tecnosocial/curso-react/tree/main/04-hooks)
 - [05-estilos](https://github.com/lab-tecnosocial/curso-react/tree/main/05-estilos)
+- [06-redux] (https://github.com/lab-tecnosocial/curso-react/tree/main/06-redux)
 
 En las carpetas pueden encontrar explicaciones, código y también ejercicios con proyectos de React.
 
