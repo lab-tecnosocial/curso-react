@@ -24,12 +24,12 @@
     - Rulesets (conjunto de reglas)
       - Selector
       - Bloque de declaracion
-      - Declaracion o regla
-      - Propiedad y valor
+        - Declaracion o regla
+          - Propiedad y valor
   - JS
     - Elementos de cualquier lenguaje de programación
     - Corre en el navegador
-    - Manipulación del DOM
+    - Manipulación del DOM y eventos
 
 ## HTML
 
@@ -41,9 +41,13 @@
       - input
       - button
     - div.contenedor-tareas
-      - ul
-        - div.tarea
-          - li
+      - ul.lista-tareas
+        - li
+          - p
+          - button
+          - button
+        - li
+          - p
           - button
           - button
 
@@ -58,8 +62,8 @@
       - button.boton-entrada
     - div.contenedor-tareas
       - ul.lista-tareas
-        - div.tarea
-          - li.tarea-item
+        - li.tarea
+          - p.tarea-item
           - button.boton-completado
           - button.boton-eliminado
 - Estilo
@@ -116,11 +120,8 @@
   - Event handlers (funciones)
     - anadirTarea()
       - prevenir default
-      - crear elemento div y su clase
-      - crear elemento li, su clase, contenido y anexar
-      - crear boton de completado y anexar
-      - crear boton eliminado y anexar
-      - añadir elemento completo a lista de tareas
+      - crear elementos, sus clases y contenido
+      - añadir sus elementos
       - limpiar entrada
     - procesarTarea()
       - referenciar elementos con los que se trabajará

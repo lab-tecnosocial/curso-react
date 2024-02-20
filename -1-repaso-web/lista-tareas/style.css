@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(120deg,  #00d4ff, #090379);
+    background: linear-gradient(120deg, #00d4ff, #090379);
     min-height: 100vh;
     color: white;
     font-family: 'Nunito', sans-serif;
@@ -15,14 +15,17 @@ header {
     font-size: 1.5rem;
 }
 
-header, form, .contenedor-tareas {
+header,
+form,
+.contenedor-tareas {
     min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form input, form button {
+form input,
+form button {
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
@@ -57,7 +60,7 @@ form button:hover {
     align-items: center;
 }
 
-.tarea li {
+.tarea p {
     flex: 1;
 }
 
@@ -65,7 +68,8 @@ form button:hover {
     padding: 0rem 0.5rem;
 }
 
-.boton-completado, .boton-eliminado {
+.boton-completado,
+.boton-eliminado {
     color: white;
     border: none;
     padding: 1rem;
@@ -76,6 +80,7 @@ form button:hover {
 .boton-completado {
     background: blue;
 }
+
 .boton-eliminado {
     background: red;
 }

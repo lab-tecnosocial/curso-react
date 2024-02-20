@@ -1,4 +1,4 @@
-// SELECTORES
+// SELECTORES y EVENT TARGETS
 const entradaTarea = document.querySelector('.entrada-tarea');
 const botonTarea = document.querySelector('.boton-entrada');
 const listaTareas = document.querySelector('.lista-tareas');
@@ -12,39 +12,27 @@ listaTareas.addEventListener('click', procesarTarea);
 // EVENT HANDLERS (funciones)
 function anadirTarea(event) {
     event.preventDefault();
-    console.log(event);
 
-    // crear elemento div y su clase
-    const divTarea = document.createElement('div')
-    divTarea.classList.add('tarea');
+    // crear elementos
+    const liTarea = createElement('li', 'tarea', '');
+    const pItem = createElement('p', 'tarea-item', entradaTarea.value);
+    const botonCompletado = createElement('button', 'boton-completado', 'O');
+    const botonEliminado = createElement('button', 'boton-eliminado', 'X');
 
-    // crear elemento li, su clase, contenido y anexar
-    const nuevaTarea = document.createElement('li')
-    nuevaTarea.classList.add('tarea-item');
-    nuevaTarea.innerText = entradaTarea.value;
-    divTarea.appendChild(nuevaTarea);
+    // añadir elementos a la tarea
+    liTarea.appendChild(pItem);
+    liTarea.appendChild(botonCompletado);
+    liTarea.appendChild(botonEliminado);
 
-    // crear boton de completado y anexar
-    const botonCompletado = document.createElement('button');
-    botonCompletado.classList.add('boton-completado');
-    botonCompletado.innerText = 'O';
-    divTarea.appendChild(botonCompletado);
+    // añadir tarea a la lista
+    listaTareas.appendChild(liTarea);
 
-    // crear boton eliminado y anexar
-    const botonEliminado = document.createElement('button');
-    botonEliminado.classList.add('boton-eliminado');
-    botonEliminado.innerText = 'X';
-    divTarea.appendChild(botonEliminado);
-
-    // añadir elemento completo a lista de tareas
-    listaTareas.appendChild(divTarea);
-
-    // limpiar entrada
+    // limpiar el input
     entradaTarea.value = '';
 
 }
 
-function procesarTarea(event){
+function procesarTarea(event) {
     console.log(event.target);
 
     // referenciar elementos con los que se trabajará
@@ -52,12 +40,20 @@ function procesarTarea(event){
     const tarea = el.parentElement;
 
     // si es completado
-    if(el.classList[0] == 'boton-completado'){
+    if (el.classList[0] == 'boton-completado') {
         tarea.classList.toggle('completado');
     }
 
     // si es eliminado
-    if(el.classList[0] === 'boton-eliminado'){
+    if (el.classList[0] === 'boton-eliminado') {
         tarea.remove();
     }
+}
+
+// HELPER FUNCTIONS
+function createElement(tag, className, content) {
+    const element = document.createElement(tag);
+    element.classList.add(className);
+    element.innerText = content;
+    return element;
 }
