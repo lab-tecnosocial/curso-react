@@ -1,4 +1,4 @@
-// SELECTORES y EVENT TARGETS
+// EVENT TARGETS Y SELECTORES  
 const entradaTarea = document.querySelector('.entrada-tarea');
 const botonTarea = document.querySelector('.boton-entrada');
 const listaTareas = document.querySelector('.lista-tareas');
@@ -20,12 +20,10 @@ function anadirTarea(event) {
     const botonEliminado = createElement('button', 'boton-eliminado', 'X');
 
     // añadir elementos a la tarea
-    liTarea.appendChild(pItem);
-    liTarea.appendChild(botonCompletado);
-    liTarea.appendChild(botonEliminado);
+    liTarea.append(pItem, botonCompletado, botonEliminado);
 
     // añadir tarea a la lista
-    listaTareas.appendChild(liTarea);
+    listaTareas.append(liTarea);
 
     // limpiar el input
     entradaTarea.value = '';
