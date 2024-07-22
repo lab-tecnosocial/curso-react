@@ -11,7 +11,7 @@ El nombre de la función se da en PascalCase y devuelve JSX. Normalmente crearem
 ```jsx
 // MiBoton.js
 export default function MiBoton() {
-  // más logica de JavaScript
+  // más lógica de JavaScript
   return <button>Clic</button>;
 }
 ```
@@ -45,10 +45,10 @@ Aquí te mostramos un posible árbol de componentes:
 
 ![](../img/arbol-components.png)
 
-El proyecto se creó con `create-react-app`. Puedes hacerlo correr dando `npm install` para instalar los modulos necesarios y luego `npm start` para correr el servidor de desarrolo.
+Puedes hacerlo correr dando `npm install` para instalar los módulos necesarios y luego `npm start` para correr el servidor de desarrollo.
 
 ## Ejercicio 2
 
-En la misma carpeta puedes encontrar el segundo ejercicio, donde debes maquetar la app de lista de tareas que hicimos al inicio. Una posible opción de arbol de componentes es la siguiente:
+En la misma carpeta puedes encontrar el segundo ejercicio, donde debes maquetar la app de lista de tareas que hicimos al inicio. Una posible opción de árbol de componentes es la siguiente:
 
 ![](../img/arbol-components-2.png)

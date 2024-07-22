@@ -4,8 +4,8 @@
 
 Para poder desarrollar React localmente debemos contar con las siguientes herramientas:
 - [Node.js](https://nodejs.org/). Para crear proyectos de JavaScript en una computadora (de escritorio o servidor) e ir más allá del navegador. Instalar.
-- [npm](https://www.npmjs.com/). Para gestionar y descargar librerias de JavaScript. Se instala por defecto junto a Node.js.
-- [Vite](https://vitejs.dev/). Para configurar proyectos de react con un solo comando. Se ejecuta cuando ya tenemos todo lo anterior.
+- [npm](https://www.npmjs.com/). Para gestionar y descargar librerías de JavaScript. Se instala por defecto junto a Node.js.
+- [Vite](https://vitejs.dev/). Para configurar, desarrollar y desplegar proyectos de react con un solo comando. Se ejecuta cuando ya tenemos todo lo anterior.
 
 Una vez hemos instalado Node.js, podemos configurar proyectos de React con el siguiente comando:
 
@@ -46,7 +46,7 @@ Explicamos los elementos principales de esta estructura:
 - `index.html`: Contiene HTML normal, pero que no necesitamos editar sino que será solo un punto de entrada para React.
 - `public/`: Carpeta de archivos estáticos.
 - `src/`: La carpeta más importante, aquí están los archivos JSX que ejecuta React
-  - `index.jsx`: Aquí se crea la raiz de la app vinculando React a `index.html`. No hay mucho que hacer aquí
+  - `main.jsx`: Aquí se crea la raiz de la app vinculando React a `index.html`. No hay mucho que hacer aquí
   - `App.jsx`: Tu primer componente. Es lo que renderiza directamente React al iniciar el proyecto. Puedes modificarlo con JSX para ver cómo cambia el sitio web.
   - Aquí también puedes crear una carpeta `components` donde crearás tus propios componentes.
 
@@ -76,7 +76,7 @@ Esta es una exprexión en JSX:
 ```jsx
 const h1 = <h1 className="titulo">Hola mundo</h1>;
 ```
-Parece un código híbrido entre JS y HTML. Pero en realidad es JS pero extendido con sintaxis de HTML estricto. Se escribe en archivos nombrados `*.js` y  no en `*.html`. En React el marcado y la lógica conviven y no se separán como en otros enfoques.
+Parece un código híbrido entre JS y HTML. Pero en realidad es JS extendido con sintaxis de HTML estricto (XML). Se escribe en archivos nombrados `*.jsx` y  no en `*.html`. En React el marcado y la lógica conviven y no se separan como en otros enfoques.
 
 Se podría generar también de esta forma, pero es más conveniente usar el estilo tipo HTML:
 ```js
@@ -165,7 +165,7 @@ En HTML podíamos usar class normalmente:
 
 ```
 
-Pero en JSX debemos usar `className` en su lugar, ya que class es una palabra reservada en JavaScript:
+Pero en JSX debemos usar `className` en su lugar, ya que `class` es una palabra reservada en JavaScript:
 
 ```jsx
 <h1 className="grande">Hola</h1>
@@ -188,7 +188,7 @@ En JSX es necesario cerrar siempre los tags:
 
 ## Inyectar JS dentro de JSX
 
-Podemos inyectar JavaScript en JSX, combinando HTML tradicioal con JS en una sola expresión. Ya sea una variable, una propiedad de un objeto, una llamada a una función, una expresión, etc. Para eso debemos usar las llaves `{}`
+Podemos inyectar JavaScript en JSX, combinando HTML tradicional con JS en una sola expresión. Ya sea una variable, una propiedad de un objeto, una llamada a una función, una expresión, etc. Para eso debemos usar las llaves `{}`
 
 Una expresión:
 

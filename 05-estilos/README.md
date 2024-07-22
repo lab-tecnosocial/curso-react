@@ -66,7 +66,7 @@ function Tarjeta(props){
 
 ## Material UI
 
-Existen muchos frameworks de estilo o “sistemas de diseño” para trabajar con React: [Bootstrap](https://react-bootstrap.github.io/), [Semantic UI](https://semantic-ui.com/), [chakra](https://chakra-ui.com/), [Ant](https://ant.design/), entre otros. Lo que tienen en común es que ya tienen componentes pre-diseñados que podemos importar y personalizar fácilmente, ahorrandonos el tiempo de diseñar nuestros propios compomentes, aunque igual tendremos luego que pensar en la funcionalidad.
+Existen muchos frameworks de estilo o “sistemas de diseño” para trabajar con React: [Bootstrap](https://react-bootstrap.github.io/), [Semantic UI](https://semantic-ui.com/), [chakra](https://chakra-ui.com/), [Ant](https://ant.design/), entre otros. Lo que tienen en común es que ya tienen componentes pre-diseñados que podemos importar y personalizar fácilmente, ahorrándonos el tiempo de diseñar nuestros propios componentes, aunque igual tendremos luego que pensar en la funcionalidad.
 
 El más popular es [Material UI](https://mui.com/), que veremos brevemente aquí:
 
@@ -101,7 +101,7 @@ Ahora sí, estamos listos para usar los componentes de esta libreria. Para ello:
 
 Ejemplo:
 
-```bash
+```jsx
 import './App.css';
 import Button from '@mui/material/Button'
 import { Container, Grid } from '@mui/material';

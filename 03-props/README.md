@@ -1,6 +1,6 @@
 # Props
 
-Al igual que las etiquetas de HTML pueden recibir ciertos datos en sus atributos para personalizar su apariencia y comportamiento, también los componentes pueden recibir propiedades, llamadas en React como `props`. También puedes pensar en ellos como atributos personalizados.
+Al igual que las etiquetas de HTML pueden recibir ciertos datos en sus atributos para personalizar su apariencia y comportamiento, también los componentes pueden recibir propiedades, llamadas en React como `props`. Puedes veras como una suerte de atributos personalizados.
 
 Los props son las entradas de los componentes función. Y se usan como un objeto en el cuerpo del componente:
 
@@ -82,11 +82,11 @@ const docentes = [
 function MiApp() {
   return (
     <>
-        { docentes.map(el => <Tarjeta img={el.img} nombre={el nombre} desc={el.des} />) }
+        { docentes.map(el => <Tarjeta img={el.img} nombre={el.nombre} desc={el.des} />) }
     </>
   );
 ```
-Otra forma de usar los props en los componentes es desestructurandolos:
+Otra forma de usar los props en los componentes es desestructurándolos:
 
 ```jsx
 // Tarjeta.js

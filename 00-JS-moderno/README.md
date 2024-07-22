@@ -34,19 +34,20 @@ Funciones flecha, similares a las funciones lambda de Python:
 const suma = (a, b) => a + b;
 ```
 
-Si solo se tiene un parametro, entonces el parentesis se puede omitir:
+Esta tiene tres variantes:
+- Si solo se tiene un parámetro, entonces el paréntesis se puede omitir:
 
 ```js
 const mostrarTexto = texto => alert("El texto es: " + texto);
 ```
 
-Si no hay parametros, entonces se puede dejar el parentesis vacío, pero debe estar presente:
+- Si no hay parámetros, entonces se puede dejar el paréntesis vacío, pero debe estar presente:
 
 ```js
 cons decirHola = () => alert("Hola");
 ```
 
-Si existe más de una linea de código en el cuerpo de la función se debe usar `{ }` y la palabra clave `return`
+- Si existe más de una linea de código en el cuerpo de la función se debe usar `{ }` y la palabra clave `return`
 
 ```js
 const suma = (a, b) => {
@@ -57,7 +58,7 @@ const suma = (a, b) => {
 
 ## Operador spread
 
-Este operador  (`...`)  nos permite copiar el contenido de un array u objeto en otro array u objeto. Dado que en React se privilegia las funciones puras y la inmutabilidad, se usa mucho este operador para actualizar arrays y objetos, creandolos de nuevo a partir de los arrays y objetos antiguos.
+Este operador  (`...`)  nos permite copiar el contenido de un array u objeto en otro array u objeto. Dado que en React se privilegia las funciones puras y la inmutabilidad, este operador se usa mucho para actualizar arrays y objetos, creándolos de nuevo a partir de los arrays y objetos antiguos.
 
 Con arrays:
 
@@ -97,19 +98,19 @@ for (index = 0; index < array.length; index++) {
 
 ```
 
-**For each**:
+**forEach**:
 
 ```js
 array.forEach(e => console.log(e))
 ```
 
-**Map** para mutar el arreglo. Se usa mucho en React para crear componentes a partir de un array con objetos o un JSON:
+**map** para mutar el arreglo. Se usa mucho en React para crear componentes a partir de un array con objetos o un JSON:
 
 ```js
 array.map(e => Math.pow(e, 2))
 ```
 
-**Filter**, se lo utiliza mucho en React para filtrar el contenido de un estado que luego se renderiza en el UI:
+**filter**, se lo utiliza mucho en React para filtrar el contenido de un estado que luego se renderiza en el UI:
 
 ```js
 array.filter(e =>  e % 2 == 0);
@@ -155,7 +156,7 @@ Una alternativa para expresar condicionales de forma más compacta. Se usa mucho
 
 ```js
 // sintaxis
-condicion ? exprsionSiTrue : expresionSiFalse
+condicion ? expresionSiTrue : expresionSiFalse
 ```
 
 ```js
@@ -278,10 +279,10 @@ Dado que JavaScript es un lenguaje no bloqueante y asíncrono debido a que mucha
 Una promesa representa un valor que puede estar disponible en algún momento o no estarlo. Por eso tiene los siguientes estados:
 
 | miPromesa.state | miPromesa.result |
-| --- | --- |
-| "pending" | no definido |
-| "fulfilled" | un valor |
-| "rejected" | un error |
+| --------------- | ---------------- |
+| "pending"       | no definido      |
+| "fulfilled"     | un valor         |
+| "rejected"      | un error         |
 
 Se utilizan para llamadas a APIs, bases de datos, etc.
 

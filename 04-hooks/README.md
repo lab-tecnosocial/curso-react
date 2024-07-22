@@ -4,7 +4,7 @@ Los “hooks” son funciones que comienzan con la palabra `use` y que permiten 
 
 ## useState
 
-Nos permite almacenar un estado (valor, arreglo, objeto) dentro de un componente y actualizarlo. La utilidad del estado es que al actualizarlo la apariencia del componente se vuelve a renderizar (o repintar) automáticamente:
+Nos permite almacenar un estado (valor, arreglo, objeto) dentro de un componente y actualizarlo. La utilidad del estado es que si lo actualizamos el componente se vuelve a renderizar (o repintar) automáticamente:
 
 Dicho de otra forma la UI **reacciona** al estado:
 
@@ -32,14 +32,14 @@ function Contador() {
   );
 }
 ```
-Donde:
+Observa que:
 - Importamos el hook de la libreria de React
 - Al inicio de nuestro componente usamos el hook, desestructurando lo que devuelve, que son dos cosas:
     - Una variable estado
     - Una función para actualizar el estado, que siempre empiece con `set`
 - El hook de useState recibe un parametro que es el valor inicial del estado
 - Ya en el elemento JSX que devuelve el componente, podemos usar el estado donde querramos.
-- El botón, u otro elemento de interacción, tienen “event listeners” que son funciones de alto orden que reciben otra función (”event handler”) que se ejecutarán cuando el usuario realiza alguna interacción, por ejemplo: onClick, onMouseOver, etc. (notar la capitalización de cada palabra).
+- El botón, u otro elemento de interacción, poseen “event listeners” que recibirán otra funciones (”event handlers”) que se ejecutarán cuando el usuario realiza alguna interacción, por ejemplo: `onClick`, `onMouseOver`, etc. (notar la capitalización de cada palabra).
     - Entonces allí le pasamos una función que contiene la función de actualización de estado.
     - Nunca se debe actualizar el estado directamente, solo mediante la función que devuelve useState
 
