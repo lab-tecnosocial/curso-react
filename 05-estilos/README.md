@@ -77,7 +77,7 @@ npm install @mui/material @emotion/react @emotion/styled # para instalar la libr
 npm install @mui/icons-material # para instalar los iconos svg
 ```
 
-También debes enlazar estas fuentes e iconos en la sección head del `index.html` del proyecto de React para que tener coherencia con el estilo de Material UI:
+También debes enlazar estas fuentes e iconos en la sección head del `index.html` del proyecto de React para tener coherencia con el estilo de Material UI:
 
 ```bash
 <link
