@@ -52,10 +52,10 @@ Explicamos los elementos principales de esta estructura:
 
 Explicamos los elementos secundarios
 - `README.md`: Una descripción de tu proyecto en Markdown.
-- `.gitignore`: Descripción de rchivos y carpetas que se ignorarán en los commits con Git.
+- `.gitignore`: Descripción de archivos y carpetas que se ignorarán en los commits con Git.
 - `package.json`: Descripción de tu proyecto, las librerias de las que depende y configuración de scripts.
 - `package-lock.json`: Descripción detallada de la versión de las librerías y sus subdependencias.
-- `node_modules/`: Una carpeta donde se descargarán todas las librerias que descargues con `npm`.
+- `node_modules/`: Una carpeta donde se descargarán todas las librerias que descargues con `npm`. Es para uso local y no debes subirla a GitHub.
 - `vite.config.js`: Configuración de Vite.
 - `.eslintrc.cjs`: Configuración del linter ES Lint (revisión de código y advertencias).
 

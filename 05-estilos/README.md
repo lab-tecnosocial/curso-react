@@ -97,7 +97,7 @@ Ahora sí, estamos listos para usar los componentes de esta libreria. Para ello:
     - Luego con algunos de contenido como: [Card](https://mui.com/material-ui/react-card/)
     - Y el resto dependerá de tus requerimientos particulares
 - Importas los componentes elegidos
-- Los usas y empiezas a personalizar sus atributos. En la misma documentación te indica que props puedes pasar al componente para que se vea o comporte de cierta forma.
+- Los usas y empiezas a personalizar sus atributos. En la misma documentación te indica qué props puedes pasar al componente para que se vea o comporte de cierta forma.
 
 Ejemplo:
 

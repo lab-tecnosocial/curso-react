@@ -45,7 +45,7 @@ Aquí te mostramos un posible árbol de componentes:
 
 ![](../img/arbol-components.png)
 
-Puedes hacerlo correr dando `npm install` para instalar los módulos necesarios y luego `npm start` para correr el servidor de desarrollo.
+Puedes hacerlo correr dando `npm install` para instalar los módulos necesarios y luego `npm run dev` para correr el servidor de desarrollo.
 
 ## Ejercicio 2
 

@@ -205,7 +205,7 @@ console.log(resultado); // 'Conduciendo el auto'
 
 ## Plantillas literales
 
-Las plantillas literales (*template literals*) utilizan backticks (\` \`) en vez de comillas (’ ’) y permiten interpolar fácilmente variables y expresiones con strings utilizando el símbolo `${}`.
+Las plantillas literales (*template literals*) utilizan backticks (\` \`) en vez de comillas (’ ’) y permiten interpolar fácilmente variables y expresiones con strings utilizando el símbolo `${}` (interpolación de strings).
 
 ```js
 let nombre = "Juan";

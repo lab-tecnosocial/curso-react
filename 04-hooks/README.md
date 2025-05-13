@@ -4,7 +4,7 @@ Los “hooks” son funciones que comienzan con la palabra `use` y que permiten 
 
 ## useState
 
-Nos permite almacenar un estado (valor, arreglo, objeto) dentro de un componente y actualizarlo. La utilidad del estado es que si lo actualizamos el componente se vuelve a renderizar (o repintar) automáticamente:
+Nos permite almacenar un estado (valor, arreglo, objeto) dentro de un componente y actualizarlo. La utilidad del estado es que si lo actualizamos, el componente se vuelve a renderizar (o repintar) automáticamente:
 
 Dicho de otra forma la UI **reacciona** al estado:
 
@@ -34,7 +34,7 @@ function Contador() {
 ```
 Observa que:
 - Importamos el hook de la libreria de React
-- Al inicio de nuestro componente usamos el hook, desestructurando lo que devuelve, que son dos cosas:
+- Al inicio de nuestro componente usamos el hook desestructurándolo, y devuelve dos cosas:
     - Una variable estado
     - Una función para actualizar el estado, que siempre empiece con `set`
 - El hook de useState recibe un parametro que es el valor inicial del estado
@@ -134,7 +134,7 @@ function ContadorTres() {
 
   useEffect(() => {
     setCalculo(() => conteo * 2); //incrementa el doble
-		(conteo !== 0) & (conteo % 10) === 0 && alert(`Llegaste a ${conteo}`) // mensaje cada multiplo de 10
+		(conteo !== 0) && (conteo % 10) === 0 && alert(`Llegaste a ${conteo}`) // mensaje cada multiplo de 10
 		
   }, [conteo]); // dependencia
 

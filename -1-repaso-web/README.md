@@ -21,9 +21,8 @@
       - Atributos: name="value" o cuando son booleanos name
     - Arbol de elementos
   - CSS
-    - Rulesets (conjunto de reglas)
-      - Selector
-      - Bloque de declaracion
+    - Selectores
+    - Bloque de declaracion (ruleset)
         - Declaracion o regla
           - Propiedad y valor
   - JS
